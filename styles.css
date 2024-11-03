@@ -1,0 +1,254 @@
+/* ====================================
+   1. CSS Variables (Custom Properties)
+   ==================================== */
+   :root {
+    --primary-color: #0aa4ad;
+    --secondary-color: #121a22;
+    --accent-color: #34495e;
+    --text-color: #1a202c;
+    --background-color: #f8f9fa;
+    --hover-color: #e9ecef;
+    --box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* ====================================
+   2. Global Styles
+   ==================================== */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    padding: 40px;
+    font-size: 15pt;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ====================================
+   3. Typography & Links
+   ==================================== */
+h3 {
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* ====================================
+   4. Header Styles
+   ==================================== */
+.header-container {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    gap: 30px;
+}
+
+.name-title {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin: 0;
+    line-height: 1;
+    padding-bottom: 0;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 8px;
+    height: 24px;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+    color: var(--secondary-color);
+}
+
+.contact-icon:hover {
+    transform: translateY(-2px);
+    color: var(--primary-color);
+}
+
+/* ====================================
+   5. Bio Section
+   ==================================== */
+.bio-text {
+    color: var(--text-color);
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+/* ====================================
+   6. Section Toggles
+   ==================================== */
+.toggle {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.toggle:hover {
+    color: var(--primary-color);
+}
+
+.content {
+    display: none;
+    margin-top: 10px;
+    padding-left: 25px;
+    border-left: 3px solid var(--primary-color);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ====================================
+   7. Lists
+   ==================================== */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+ul li:before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* ====================================
+   8. Work Experience Section
+   ==================================== */
+#work h3 {
+    margin-bottom: 5px;
+}
+
+#work p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+#work ul {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* ====================================
+   9. Skills Grid
+   ==================================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.skill-category {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+}
+
+.skill-category h3 {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    padding-left: 10px;
+    border-left: 3px solid var(--primary-color);
+}
+
+/* ====================================
+   10. Tool Logos
+   ==================================== */
+/* Update these styles in your Tool Logos section */
+.tool-logos {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tool-logo {
+    width: 32px; /* Slightly larger size */
+    height: 32px;
+    min-width: 32px; /* Prevent shrinking */
+    min-height: 32px;
+    transition: transform 0.2s ease;
+    object-fit: contain;
+    display: block; /* Ensures consistent spacing */
+    filter: grayscale(0%); /* Optional: remove if you want original colors */
+}
+
+.tool-logo-with-bg {
+    background-color: white;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.tool-logo:hover {
+    transform: translateY(-2px);
+    filter: grayscale(0%); /* Shows original colors on hover if using grayscale */
+}
+
+/* ====================================
+   11. Responsive Design
+   ==================================== */
+@media (max-width: 1200px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .skill-category {
+        padding: 15px;
+    }
+    
+    .name-title {
+        font-size: 2em;
+    }
+}

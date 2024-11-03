@@ -1,0 +1,13 @@
+{
+    "rewrites": [
+      { "source": "/index", "destination": "/index.html" },
+      { "source": "/theatre", "destination": "/theatre.html" },
+      { "source": "/404", "destination": "/404.html" },
+      { "source": "/mother", "destination": "/mother.html" },
+      { "source": "/jubensha", "destination": "/jubensha.html" },
+      { "source": "/updates", "destination": "/updates.html" },
+      { "source": "/tintin", "destination": "/tintin.html" }
+
+    ]
+  }
+  
