@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>matthewlizak.pl</title>
+    <title>Social Card - Matthew Lizak</title>
+    <meta charset="utf-8">
     <style>
         body {
             margin: 0;
             padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 1200px;
+            height: 630px;
             background-color: #f8f9fa;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
-        h2 {
-            font-size: 48px;
+        .name {
+            font-size: 72px;
             font-weight: 600;
-            letter-spacing: -0.02em;
-            color: #808080;
+            color: #0aa4ad;
         }
 
-        .white-p {
-            color: white;
-            text-shadow: 2px 2px 2px #808080;
-        }
-
-        .red-l {
-            color: #FF0000;
+        .logo {
+            width: 120px;
+            height: 120px;
         }
     </style>
 </head>
 <body>
-    <h2>
-        <span>matthewlizak.</span><span class="white-p">p</span><span class="red-l">l</span>
-    </h2>
+    <div class="name">Matthew Lizak</div>
+    <svg class="logo" viewBox="0 0 32 32">
+        <defs>
+            <pattern id="checkerPattern" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="8" height="8" fill="#0aa4ad"/>
+                <rect x="8" y="0" width="8" height="8" fill="#db9e7f"/>
+                <rect x="0" y="8" width="8" height="8" fill="#db9e7f"/>
+                <rect x="8" y="8" width="8" height="8" fill="#0aa4ad"/>
+            </pattern>
+        </defs>
+        <circle cx="16" cy="16" r="15" fill="url(#checkerPattern)"/>
+    </svg>
 </body>
 </html>
